@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: VIOLET;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'BLACK')">MY PROFILE</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Calculator</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>INTRODUCTION</h3>
+  <p>This website is going to give you an idea about me..</p>
+  <p>Hiii...Let's be friends</p>
+  <P>Happy Connect</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>INFORMATION</h3>
+   <table>
+        <tr>
+      <td>NAME--</td>
+      <td>Kirthana Praveen</td>
+          </tr>
+    <tr>
+      <td>AGE--</td>
+      <td>19</td>
+          </tr>
+    <tr>
+      <td>QUALIFICATION--</td>
+      <td>Btech</td>
+          </tr>
+    <tr>
+      <td>HOBBIES--</td>
+      <td>Dancing,Singing,Drawing,Reading,Watching Movies etc...</td>
+          </tr>
+    <tr>
+      <td>LIKES--</td>
+      <td>Flowers,Butterflies,Shopping,Bakeries,Suprises....</td>
+          </tr>
+    <tr>
+      <td>DISLIKES--</td>
+      <td>Loud noise,Rude people,Hospitals,Rejections,Studying etc...</td>
+         </tr>
+  </table>
+
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>CAlCULATOR</h3>
+  <style>
+     .calculator {
+        width: 300px;
+        margin: auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .display {
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        text-align: right;
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .button {
+        width: 25%;
+        padding: 10px;
+        margin: 5px 0;
+        background-color: #e6e6e6;
+        border: 1px solid #ccc;
+        text-align: center;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+    .button-row {
+        
+    }
+    .buttons{
+      display: flex;
+
+    }
+    .button{
+      color: black;
+    }
+</style>
+</head>
+<body>
+<div class="calculator">
+    <div class="display">{{}}</div>
+    <div class="button-row">
+      <div class="buttons">
+        <div class="button" onclick()="fun(7)">7</div>
+        <div class="button" onclick()="fun('8')">8</div>
+        <div class="button" onclick()="fun('9')">9</div>
+        <div class="button" onclick()="fun('*')">*</div>
+      </div>
+      <div class="buttons">
+        <div class="button" onclick()="fun('4')">4</div>
+        <div class="button" onclick()="fun('5')">5</div>
+        <div class="button" onclick()="fun('6')">6</div>
+        <div class="button" onclick()="fun('+')">+</div>
+
+      </div>
+      <div class="buttons">
+        <div class="button" onclick()="fun('1')">1</div>
+        <div class="button" onclick()="fun('2')">2</div>
+        <div class="button" onclick()="fun('3')">3</div>
+        <div class="button" onclick()="fun('/')">/</div>
+      </div>
+      <div class="buttons">
+        <div class="button" onclick()="fun('0')">0</div>
+        <div class="button" onclick()="fun('-')">-</div>
+        <div class="button" onclick()="fun('%')">%</div>
+        <div class="button" onclick()="fun('=')">=</div>
+      </div>
+     </div>>
+</div>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>A blog  is an informational website consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order so that the most recent post appears first, at the top of the web page. In the 2000s, blogs were often the work of a single individual, occasionally of a small group, and often covered a single subject or topic.</p>
+</div>
+
+<footer>
+  <p>Author: Kirthana Praveen<br>
+  <a href="mailto:kirthana.praveen@impelsys.com">kirthana.praveen@impelsys.com</a></p>
+</footer>
+
+
+
+<script>
+  // fun(){
+  //   ;
+  //   let b=0;
+  //   let c= 0;
+  // }
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
